@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dice Roller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Go to Home page">Home</a></li>
+                <li><a href="Dice.html" title="Dice Roller Application">Dice Roller</a></li>
+                <li><a href="Calculator.html" title="Calculator Application">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="welcomeScreen">
+    <h1>Welcome to our dice flying chess game</h1>
+    <h2>Basic information</h2>
+    <details>
+    <summary>Operation guide</summary>
+    <p><img src="mouse.jpg" alt="mouse" width="20" height="20" >Use the mouse to operate.</p>
+    </details>
+    <details>
+    <summary>How to get started</summary>
+    <p>After the game is loaded, click [Start Game] - the game rules will pop up on the page. After reading the game rules, click [OK] to start the game.Select the number of dice you will roll each turn from the dropdown menu.
+Select the number of players participating in the game.
+Enter a unique name for each player. Names must be 1-20 characters long.
+Click Submit to confirm the player names and start the game.</p>
+    </details>
+<details>
+    <summary>Taking Turns</summary>
+    <p>Players will take turns rolling the dice by clicking the Roll Dice button.
+The dice will determine how many steps you can move.
+For your move, click on the next unselected radio button on your path. This will fill the button, marking your progress.</p>
+    </details>
+
+    <details>
+    <summary>Game goal</summary>
+    <p>The goal is to navigate your plane across the board by rolling dice and activating radio buttons on your path.
+Each player competes to be the first to press 20 radio buttons along their path.To win, you must be the first player to select all 20 radio buttons on your designated path.
+The paths are as follows:
+Player 1 (1-2): Between Player 1 and Player 2
+Player 2 (2-4): Between Player 2 and Player 4
+Player 3 (3-1): Between Player 3 and Player 1
+Player 4 (4-3): Between Player 4 and Player 3
+When a player wins, a congratulatory message will appear, celebrating the victory.</p>
+    </details>
+    <details>
+    <summary>After the Game</summary>
+    <p>Once a player has won, the game will end, and all paths will be disabled.Then will restart the game and a new round.</p>
+    </details>
+
+        <button id="startGame">Start Game</button>
+    </div>
+    <div id="gameScreen" style="display:none;">
+	<label for="diceNumber">Select the number of dice:</label>
+        <select id="diceNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+	    <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+	    <option value="6">6</option>
+        </select>
+	<label for="playerNumber">Select the number of player:
+</label>
+            <select id="playerNumber">
+            <option value="1">1</option>
+            <option value="2">2</option>
+	    <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <form id="playerNamesForm">
+          <div id="playerNamesContainer">
+	  </div>
+	  <input type="submit" id="submitPlayers" value="Submit">
+	</form>  
+
+    <div id="playerImagesContainer" >
+        
+    </div>
+    <div class="dice-roll-container">      
+        <button id="rollDice">Roll Dice</button>
+        <div id="diceResults" >
+            
+        </div>
+    <div id="diceContainer">
+        <img src="1.gif" alt="Dice showing 1" width="20" height="20" >
+        <img src="2.gif" alt="Dice showing 2" width="20" height="20" >
+        <img src="3.gif" alt="Dice showing 3" width="20" height="20" >
+        <img src="4.gif" alt="Dice showing 4" width="20" height="20" >
+        <img src="5.gif" alt="Dice showing 5" width="20" height="20" >
+        <img src="6.gif" alt="Dice showing 6" width="20" height="20" >
+    </div>
+    </div>
+    <div id="pathContainer">
+
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

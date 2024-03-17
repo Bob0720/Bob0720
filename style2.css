@@ -1,0 +1,83 @@
+body {
+    background-image: url(homebackground.jpg);
+    font-family: Times New Roman;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    color: #017cff;
+}
+
+#intro, #factOfDay, #features, #contact {
+    background: rgba(255, 255, 255, 0.9); 
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#factText {
+    color: #017cff;
+    font-style: italic;
+}
+
+#contactForm input[type="email"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #017cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mouse-trail {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background-color: #017cff;
+    border-radius: 50%;
+    pointer-events: none; 
+    z-index: 1;
+}
